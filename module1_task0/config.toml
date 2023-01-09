@@ -1,0 +1,3 @@
+baseURL = 'http://example.org/'
+title = '“Awesome Inc.'
+theme = 'ananke'
