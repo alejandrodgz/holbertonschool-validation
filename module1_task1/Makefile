@@ -1,5 +1,5 @@
 build:
-	hugo --destination /dist
+	hugo -s . -d dist/
 
 clean:
 	rm -rf dist/
