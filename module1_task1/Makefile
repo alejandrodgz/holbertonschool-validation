@@ -1,6 +1,3 @@
-space=$(subst ,, )
-bar=$(subst $(space),-,$(POST_TITLE))
-
 build:
 	hugo --destination ./dist
 
