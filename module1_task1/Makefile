@@ -1,12 +1,13 @@
 space=$(subst ,, )
 bar=$(subst $(space),-,$(POST_TITLE))
 
-Build:
+build:
 	hugo --destination ./dist
 
-Clean:
+clean:
 	rm -r ./dist
-Post:
+
+post:
 	@rm content/posts/$(POST_NAME).md
 	hugo new posts/$(bar)/$(POST_NAME).md
 	@mv content/posts/$(bar)/$(POST_NAME).md  content/posts/
