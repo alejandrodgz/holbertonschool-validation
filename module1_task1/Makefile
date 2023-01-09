@@ -5,7 +5,7 @@ build:
 	hugo --destination ./dist
 
 clean:
-	rm -r ./dist
+	rm -rf ./dist
 
 post:
 	@rm -rf content/posts/$(POST_NAME).md
