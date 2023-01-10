@@ -4,10 +4,10 @@
 
 #* The production website is hosted in an Ubuntu 18.04 Docker container
 #* The applications "GoHugo" and "Make" are installed with `apt-get update && apt-get install -y hugo make`.
-sudo apt-update
-sudo apt install hugo
-sudo apt install make
-sudo apt-get upgrade
+apt-update
+apt install hugo
+apt install make
+apt-get upgrade
 
 #* When running the command `make build`, there is a bunch of errors which end with the following lines:
 make build
