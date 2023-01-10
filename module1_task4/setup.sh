@@ -4,8 +4,11 @@
 
 #* The production website is hosted in an Ubuntu 18.04 Docker container
 #* The applications "GoHugo" and "Make" are installed with `apt-get update && apt-get install -y hugo make`.
-apt-update && apt install -y hugo
-apt-get update && apt install -y make
+apt-update
+apt install -y git
+apt install -y hugo
+apt install -y make
+apt-upgrade
 
 
 #* When running the command `make build`, there is a bunch of errors which end with the following lines:
