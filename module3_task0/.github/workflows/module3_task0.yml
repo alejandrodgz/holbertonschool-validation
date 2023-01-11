@@ -17,8 +17,6 @@ jobs:
         with:
           owner: 'alejandrodgz'
           repository: 'holbertonschool-validation'
-      - name: Access cloned repository content
-        run: |
-            echo "::group::My title"
-            echo "Inside group"
-            echo "::endgroup::"
+      - name: Install Composer Dependencies
+        working-directory: ./holbertonschool-validation/module3_task0
+        run: make help
