@@ -1,0 +1,5 @@
+apples:
+    collection:
+        - name: Green
+        - name: Blue
+    favourite: Pink Lady
