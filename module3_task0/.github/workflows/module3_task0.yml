@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
-      uses: GuillaumeFalourd/clone-github-repo-action@v2
-      with:
-        owner: 'alejandrodgz'
-        repository: 'holbertonschool-validation'
+      - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
+        uses: GuillaumeFalourd/clone-github-repo-action@v2
+        with:
+          owner: 'alejandrodgz'
+          repository: 'holbertonschool-validation'
