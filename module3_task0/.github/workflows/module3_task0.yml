@@ -19,5 +19,5 @@ jobs:
           repository: 'holbertonschool-validation'
       - name: Access cloned repository content
         run: |
-          cd <repository-name>
+          cd holbertonschool-validation/tree/master/module3_task0
           make help
