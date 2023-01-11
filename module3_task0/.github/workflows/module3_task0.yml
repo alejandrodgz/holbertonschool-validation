@@ -19,5 +19,6 @@ jobs:
           repository: 'holbertonschool-validation'
       - name: Access cloned repository content
         run: |
-          cd holbertonschool-validation/tree/master/module3_task0
-          make help
+            echo "::group::My title"
+            echo "Inside group"
+            echo "::endgroup::"
