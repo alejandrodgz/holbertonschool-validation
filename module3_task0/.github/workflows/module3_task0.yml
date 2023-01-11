@@ -1,19 +1,19 @@
-name: task0
+name: module3_task0
 
 on:
   push:
     branches: [master]
-
   schedule:
     - cron: "0 06 * * *"
 
 jobs:
-  clone:
+  build:
 
     runs-on: ubuntu-latest
 
     steps:
       - name: "Checkout"
         uses: actions/checkout@v3
+
       - name: "directory changes"
         run: cd module3_task0 && make help
