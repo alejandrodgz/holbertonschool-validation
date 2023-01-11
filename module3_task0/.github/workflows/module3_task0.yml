@@ -17,3 +17,7 @@ jobs:
         with:
           owner: 'alejandrodgz'
           repository: 'holbertonschool-validation'
+      - name: Access cloned repository content
+        run: |
+          cd <repository-name>
+          make help
