@@ -17,6 +17,7 @@ jobs:
           owner: 'alejandrodgz'
           repository: 'holbertonschool-validation'
       - name: update first
+        working-directory: ./holbertonschool-validation/module3_task0
         run: apt update
       - name: install make
         run: apt-get update && apt-get install -y make
@@ -27,5 +28,4 @@ jobs:
       - name: last step
         run: apt install ./hugo.deb
       - name: build the website
-        working-directory: ./holbertonschool-validation/module3_task0
         run: make build
