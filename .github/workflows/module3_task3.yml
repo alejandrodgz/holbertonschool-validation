@@ -37,3 +37,10 @@ jobs:
       - name: run lint
         working-directory: ./holbertonschool-validation/module3_task3
         run: make lint
+      - name: Create Release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          files: |
+            awesome-website.zip
