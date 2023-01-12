@@ -1,4 +1,4 @@
-name: module3_task1
+name: module3_task2
 on:
   push:
   schedule:
@@ -13,5 +13,10 @@ jobs:
           owner: 'alejandrodgz'
           repository: 'holbertonschool-validation'
       - name: call script
-        working-directory: ./holbertonschool-validation/module3_task1
+        working-directory: ./holbertonschool-validation/module3_task2
         run: ./setup.sh && make build
+      - name: install markdownlint
+        run: npm install -g markdownlint-cli
+      - name: run make
+        working-directory: ./holbertonschool-validation/module3_task2
+        run: make package
