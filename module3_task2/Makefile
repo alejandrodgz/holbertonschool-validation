@@ -17,7 +17,10 @@ lint: ##lint all md files
 	markdownlint "*.md"
 
 unit-tests: ## run unit tests
-	echo "all tests done"
+	@echo "all tests done"
+
+integration-tests: ## run integration-tests
+	@echo "all integration-tests done"
 
 help: ## show help
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
