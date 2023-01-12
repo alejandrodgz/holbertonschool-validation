@@ -17,6 +17,5 @@ jobs:
           owner: 'alejandrodgz'
           repository: 'holbertonschool-validation'
       - name: call script
+        working-directory: ./holbertonschool-validation/module3_task0
         run: cd module3_task1 && ./setup.sh
-      - name: make command
-        run: cd module3_task1 && make build
