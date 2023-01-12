@@ -1,4 +1,4 @@
-## Prerequisites
+# Prerequisites
 
 this hugo website should be made right now
 
@@ -24,5 +24,6 @@ package: make a package
 - The file .github/workflows/module3_task1.yml must be present
 
   - It must be valid in YAML syntax
-  - It must be a valid GitHub action workflow with 1 job with at least 3 steps (checkout, running setup.sh and then the 5 make commands)
+  - It must be a valid GitHub action workflow with 1 job with at least 3 steps
+    (checkout, running setup.sh and then the 5 make commands)
   - It must be have 2 triggers
