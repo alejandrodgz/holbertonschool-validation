@@ -8,7 +8,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-lastest
 
     steps:
       - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
@@ -16,8 +16,10 @@ jobs:
         with:
           owner: 'alejandrodgz'
           repository: 'holbertonschool-validation'
-      - name: Build Hugo
-        uses: lowply/build-hugo@v0.106.0
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
       - name: build the website
         working-directory: ./holbertonschool-validation/module3_task0
         run: make build
