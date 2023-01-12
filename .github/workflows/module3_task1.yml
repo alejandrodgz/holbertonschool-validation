@@ -8,7 +8,7 @@ on:
 jobs:
   clone:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
       - name: Clone repository
@@ -21,7 +21,9 @@ jobs:
       - name: run update curl
         run: apt-get update && apt-get install -y wget
       - name: hugo with wget
-        run: wget https://github.com/gohugoio/hugo/releases/download/v0.50/hugo_0.50_Linux-64bit.deb
+        run: wget https://github.com/gohugoio/hugo/releases/download/v0.84.0/hugo_extended_0.84.0_Linux-64bit.deb
+      - name: hugo instal
+        run: dpkg -i hugo_extended_0.84.0_Linux-64bit.deb
       - name: make command
         working-directory: ./holbertonschool-validation/module3_task1
-        run: make help
+        run: make build
