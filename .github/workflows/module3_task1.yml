@@ -20,8 +20,8 @@ jobs:
         run: apt-get update && apt-get install -y make
       - name: download curl
         run: apt install -y curl
-      - name: download hugo
-        run: curl -L https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extended_0.109.0_linux-amd64.deb -o hugo.deb
+ #     - name: download hugo
+#        run: curl -L https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extended_0.109.0_linux-amd64.deb -o hugo.deb
       - name: make command
         working-directory: ./holbertonschool-validation/module3_task1
         run: make help
