@@ -15,6 +15,3 @@ jobs:
       - name: call script
         working-directory: ./holbertonschool-validation/module3_task1
         run: ./setup.sh
-      - name: call script
-        working-directory: ./holbertonschool-validation/module3_task1
-        run: make build
