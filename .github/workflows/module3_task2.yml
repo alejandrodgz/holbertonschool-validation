@@ -22,7 +22,10 @@ jobs:
         run: make package
       - name: run unit-tests
         working-directory: ./holbertonschool-validation/module3_task2
-        run: make unit-tests
+        run: make unit-tests && make integration-tests
+      - name: run integration-tests
+        working-directory: ./holbertonschool-validation/module3_task2
+        run: make integration-tests
       - name: run lint
         working-directory: ./holbertonschool-validation/module3_task2
         run: make lint
