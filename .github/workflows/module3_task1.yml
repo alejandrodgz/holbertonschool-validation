@@ -6,26 +6,16 @@ on:
     - cron: "0 6 * * *"
 
 jobs:
-  build:
+  clone:
 
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
+      - name: clone repository
         uses: GuillaumeFalourd/clone-github-repo-action@v2
         with:
           owner: 'alejandrodgz'
           repository: 'holbertonschool-validation'
-      - name: update first
-        working-directory: ./holbertonschool-validation/module3_task1
-        run: apt update
-      - name: install make
-        run: apt-get update && apt-get install -y make
-      - name: install curl
-        run: apt install -y curl
-      - name: install hugo
-        run: curl -L https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extended_0.109.0_linux-amd64.deb -o hugo.deb
-      - name: last step
-        run: apt install ./hugo.deb
-      - name: build the website
-        run: make build
+      - name: Install Composer Dependencies
+        working-directory: ./holbertonschool-validation/module3_task0
+        run: make help
