@@ -1,9 +1,11 @@
 name: module3_task1
-on:
-  push:
 
+on: # Events that trigger workflows
+  push:
+    branches: [master]
   schedule:
-    - cron: "0 6 * * *"
+    # is a special character in YAML so you have to quote this string
+    - cron: '30 00 * * *' # time 12:30 am
 
 jobs:
   build:
@@ -11,12 +13,12 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-      - name: Clone repository
-        uses: GuillaumeFalourd/clone-github-repo-action@v2
-        with:
-          owner: 'alejandrodgz'
-          repository: 'holbertonschool-validation'
-      - name: call script
-        run: cd module3_task1 && ./setup.sh
-      - name: make command
-        run: cd module3_task1 && make build
+      - name: "Checkout" # Download code from the repository
+        uses: actions/checkout@v3
+
+      - name: "Run bash script"
+        run: |
+          cd module3_task1 && ./setup.sh
+      - name: "Run make build" # Execute the command make build
+        run: |
+          cd module3_task1 && make build
