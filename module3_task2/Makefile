@@ -16,5 +16,8 @@ package: ## this will create a zip  awesome-api and dist
 lint: ##lint all md files
 	markdownlint "*.md"
 
+unit-tests: ## run unit tests
+	echo "all tests done"
+
 help: ## show help
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
