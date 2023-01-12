@@ -16,6 +16,8 @@ jobs:
         with:
           owner: 'alejandrodgz'
           repository: 'holbertonschool-validation'
+      - name: Build Hugo
+        uses: lowply/build-hugo@v0.106.0
       - name: Install Composer Dependencies
         working-directory: ./holbertonschool-validation/module3_task0
-        run: make build
+        run: make help
