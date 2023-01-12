@@ -39,6 +39,3 @@ jobs:
         run: make lint
       - name: realease
         uses: actions/create-release@v1
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
