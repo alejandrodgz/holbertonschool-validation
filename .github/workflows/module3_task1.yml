@@ -14,6 +14,4 @@ jobs:
           repository: 'holbertonschool-validation'
       - name: call script
         working-directory: ./holbertonschool-validation/module3_task1
-        run: ./setup.sh
-      - name: call script
-        run: cd module3_task1 && make build
+        run: ./setup.sh && make build
