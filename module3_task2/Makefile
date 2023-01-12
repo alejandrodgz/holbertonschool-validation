@@ -22,5 +22,8 @@ unit-tests: ## run unit tests
 integration-tests: ## run integration-tests
 	@echo "all integration-tests done"
 
+validate: ## run validate
+	@echo "all validations done"
+
 help: ## show help
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
