@@ -18,6 +18,8 @@ jobs:
           repository: 'holbertonschool-validation'
       - name: run update and isntall make
         run: apt-get update && apt-get install -y make
+      - name: run update curl
+        run: apt-get update && apt-get install -y curl
       - name: make command
         working-directory: ./holbertonschool-validation/module3_task1
         run: make help
