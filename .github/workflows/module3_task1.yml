@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: clone repository
+      - name: Clone repository
         uses: GuillaumeFalourd/clone-github-repo-action@v2
         with:
           owner: 'alejandrodgz'
