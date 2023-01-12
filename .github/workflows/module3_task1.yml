@@ -19,9 +19,9 @@ jobs:
       - name: run update and isntall make
         run: apt-get update && apt-get install -y make
       - name: run update curl
-        run: apt-get update && apt-get install -y curl
-      - name: hugo
-        run: sudo curl -L https://github.com/gohugoio/hugo/releases/download/v0.109.0/hugo_extended_0.109.0_linux-amd64.deb -o hugo.deb
+        run: apt-get update && apt-get install -y wget
+      - name: hugo with wget
+        run: wget https://github.com/gohugoio/hugo/releases/download/v0.50/hugo_0.50_Linux-64bit.deb
       - name: make command
         working-directory: ./holbertonschool-validation/module3_task1
         run: make help
