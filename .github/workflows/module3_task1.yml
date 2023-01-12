@@ -19,5 +19,4 @@ jobs:
       - name: call script
         run: cd module3_task1 && ./setup.sh
       - name: make command
-        working-directory: ./holbertonschool-validation/module3_task1
-        run: make build
+        run: cd module3_task1 && make build
