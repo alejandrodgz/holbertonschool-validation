@@ -12,5 +12,8 @@ post: ## make a post with title = POST_TITLE and name = POST_NAME (environ varia
 package: ## this will create a zip  awesome-api and dist
 	@zip -r awesome-website.zip awesome-api dist/
 
+lint: ##lint all md files
+	markdownlint "README.md DEPLOY.md"
+
 help: ## show help
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
