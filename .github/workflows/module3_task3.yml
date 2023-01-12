@@ -35,6 +35,5 @@ jobs:
       - name: run lint
         working-directory: ./holbertonschool-validation/module3_task3
         run: make lint
-      - name: Release
-        uses: softprops/action-gh-release@v1
+
 
