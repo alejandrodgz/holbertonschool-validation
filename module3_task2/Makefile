@@ -10,6 +10,7 @@ post: ## make a post with title = POST_TITLE and name = POST_NAME (environ varia
 	sed -i 's+title.*+title: "$(POST_TITLE)"+g' content/posts/$(POST_NAME).md
 
 package: ## this will create a zip  awesome-api and dist
+	@hugo
 	@zip -r awesome-website.zip awesome-api ./dist
 
 lint: ##lint all md files
