@@ -1,0 +1,17 @@
+name: module3_task1
+on:
+  push:
+  schedule:
+    - cron: "0 6 * * *"
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Clone repository
+        uses: GuillaumeFalourd/clone-github-repo-action@v2
+        with:
+          owner: 'alejandrodgz'
+          repository: 'holbertonschool-validation'
+      - name: call script
+        working-directory: ./holbertonschool-validation/module3_task1
+        run: ./setup.sh && make build
