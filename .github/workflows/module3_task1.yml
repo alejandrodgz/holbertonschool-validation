@@ -16,6 +16,8 @@ jobs:
         with:
           owner: 'alejandrodgz'
           repository: 'holbertonschool-validation'
+      - name: run update and isntall make
+        run: apt-get update && apt-get install -y make
       - name: Install Composer Dependencies
         working-directory: ./holbertonschool-validation/module3_task1
         run: make help
