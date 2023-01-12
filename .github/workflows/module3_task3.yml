@@ -1,10 +1,10 @@
 name: module3_task3
 on:
   push:
-    branches:    
+    branches:
       - '*'
-    tags:        
-      - '*' 
+    tags:
+      - '*'
   schedule:
     - cron: "0 6 * * *"
 
