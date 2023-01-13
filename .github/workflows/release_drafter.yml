@@ -3,6 +3,7 @@ on:
   push:
     branches: [master]
   pull_request:
+    branches: [master]
     tags:
       - "*.*.*"
   schedule:
@@ -15,7 +16,7 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-18.04
     steps:
-      - name: draft
-        uses: release-drafter/release-drafter@v5
+
+      - uses: release-drafter/release-drafter@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
