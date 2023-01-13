@@ -1,12 +1,13 @@
 name: module3_task4
 on:
   push:
-    branches: [master]
-  pull_request:
-    tags:
-      - "*.*.*"
+    branches:
+      - main
+      - master
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "0 0 * * *"
+  pull_request:
+    types: [opened, reopened, edited, ready_for_review]
 
 jobs:
   build:
