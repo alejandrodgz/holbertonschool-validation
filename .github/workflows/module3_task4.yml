@@ -1,0 +1,53 @@
+name: module3_task3
+on:
+  push:
+    branches: [master]
+  pull requests:
+    tags:
+      - "*.*.*"
+  schedule:
+    - cron: "0 6 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Clone repository
+        uses: GuillaumeFalourd/clone-github-repo-action@v2
+        with:
+          owner: 'alejandrodgz'
+          repository: 'holbertonschool-validation'
+      - name: call script
+        working-directory: ./holbertonschool-validation/module3_task3
+        run: ./setup.sh && make build
+      - name: install markdownlint
+        run: npm install -g markdownlint-cli
+      - name: run make
+        working-directory: ./holbertonschool-validation/module3_task3
+        run: make package
+      - name: run unit-tests
+        working-directory: ./holbertonschool-validation/module3_task3
+        run: make unit-tests && make integration-tests
+      - name: run integration-tests
+        working-directory: ./holbertonschool-validation/module3_task3
+        run: make integration-tests
+      - name: run validate
+        working-directory: ./holbertonschool-validation/module3_task3
+        run: make validate
+      - name: run lint
+        working-directory: ./holbertonschool-validation/module3_task3
+        run: make lint
+      - name: "Archive production artifacts"
+        uses: actions/upload-artifact@v3
+        with:
+          name: file named awesome-website
+          path: |
+            module3_task3/awesome-website.zip
+      - name: "Release task 3"
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          body_path: module3_task3/DEPLOY.md
+          files: |
+            module3_task3/awesome-website.zip
+            module3_task3/DEPLOY.md

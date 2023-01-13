@@ -1,0 +1,23 @@
+on:
+  push:
+    branches: [master]
+  pull requests:
+    tags:
+      - "*.*.*"
+  schedule:
+    - cron: "0 6 * * *"on:
+  push:
+    branches: [master]
+  pull requests:
+    types: [opened, reopened, synchronize]
+    tags:
+      - "*.*.*"
+  schedule:
+    - cron: "0 6 * * *"
+
+jobs:
+  update_release_draft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: draft
+      - uses: release-drafter/release-drafter@v5
