@@ -32,3 +32,9 @@ jobs:
       - name: run lint
         working-directory: ./holbertonschool-validation/module3_task2
         run: make lint
+      - name: archive build
+        if: ${{ success()}}
+        uses: actions/upload-artifact@v3
+        with:
+          name: upload-package
+          path: module3_task2/awesome-website.zip
