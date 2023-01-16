@@ -1,6 +1,5 @@
----
-name-template: 'v$RESOLVED_VERSION 🌈'
-tag-template: 'v$RESOLVED_VERSION'
+name-template: '$RESOLVED_VERSION 🌈'
+tag-template: '$RESOLVED_VERSION'
 categories:
   - title: '🚀 Features'
     labels:
@@ -14,7 +13,7 @@ categories:
   - title: '🧰 Maintenance'
     label: 'chore'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
-change-title-escapes: '\<*_&' 
+change-title-escapes: '\<*_&'
 version-resolver:
   major:
     labels:
@@ -29,5 +28,4 @@ version-resolver:
 template: |
   ## Changes
 
-  
   $CHANGES
